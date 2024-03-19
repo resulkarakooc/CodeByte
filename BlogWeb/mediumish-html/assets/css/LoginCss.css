@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-    background-color: #80a1a2;
+    background-color:#ffff;
 }
 
 .forms-section {
@@ -77,12 +77,12 @@ body {
 }
 
 .form-wrapper.is-active .switcher-login {
-    color: #fff;
+    color: #909090;
     transform: translateX(90px);
 }
 
 .form-wrapper.is-active .switcher-signup {
-    color: #fff;
+    color:cadetblue;
     transform: translateX(-90px);
 }
 
@@ -148,7 +148,7 @@ body {
     }
 
     100% {
-        background-color: #fff;
+        background-color: #909090;
         transform: translate(35%, -20px);
     }
 }
@@ -188,7 +188,7 @@ body {
     }
 
     100% {
-        background-color: #fff;
+        background-color:#909090;
         transform: translate(-35%, -20px) scaleY(1);
     }
 }
