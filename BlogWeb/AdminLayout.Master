@@ -18,7 +18,7 @@
             Close &times;</button>
         <a href="Confirm.aspx" class="w3-bar-item w3-button">Onay</a>
         <a href="AdminPanel.aspx" class="w3-bar-item w3-button">Gelen Mesajlar</a>
-        <a href="HomePage.aspx" class="w3-bar-item w3-button">Siteye Git</a>
+        <a href="/mediumish-html/Default.aspx" class="w3-bar-item w3-button">Siteye Git</a>
     </div>
 
     <div id="main">

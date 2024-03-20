@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     margin: 0;
     font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
     background-color:#ffff;
 }
+
+
 
 .forms-section {
     display: flex;
@@ -17,10 +21,10 @@ body {
     align-items: center;
 }
 
-.section-title {
+.section-titlee {
     font-size: 32px;
     letter-spacing: 1px;
-    color: #fff;
+    
 }
 
 .forms {
@@ -245,8 +249,8 @@ body {
 }
 
     .input-block label {
-        font-size: 14px;
-        color: #a1b4b4;
+        font-size: 18px;
+        color: #0d1115;
     }
 
     .input-block input {
@@ -256,11 +260,11 @@ body {
         padding-right: 15px;
         padding-left: 15px;
         font-size: 16px;
-        line-height: 40px;
+        
         color: #3b4465;
         background: #eef9fe;
         border: 1px solid #cddbef;
-        border-radius: 2px;
+        border-radius: 4px;
     }
 
 .form [type='submit'] {

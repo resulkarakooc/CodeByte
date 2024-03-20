@@ -14,17 +14,24 @@ namespace BlogWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlCommand contact = new SqlCommand("select * from Table_contact ",SqlConnectClass.connection);
+            if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
+            {
+                SqlCommand contact = new SqlCommand("select * from Table_contact ", SqlConnectClass.connection);
 
-            SqlConnectClass.checkconnection();
+                SqlConnectClass.checkconnection();
 
-            SqlDataReader yaz = contact.ExecuteReader();
+                SqlDataReader yaz = contact.ExecuteReader();
 
-            DataList1.DataSource = yaz;
+                DataList1.DataSource = yaz;
 
-            DataList1.DataBind();
+                DataList1.DataBind();
 
-            yaz.Close();
+                yaz.Close();
+            }
+            else
+            {
+                Response.Redirect("/mediumish-html/LoginPage.aspx");
+            }
         }
     }
 }

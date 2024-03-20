@@ -68,15 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AddBlog.aspx" />
     <Content Include="AdminPanel.aspx" />
     <Content Include="Confirm.aspx" />
     <Content Include="Confirmonay.aspx" />
     <Content Include="css\addBlogCss.css" />
-    <Content Include="HomePage.aspx" />
     <Content Include="css\Homestyle.css" />
-    <Content Include="Login.aspx" />
     <Content Include="mediumish-html\assets\css\bootstrap.min.css" />
+    <Content Include="mediumish-html\assets\css\eddformstyle.css" />
     <Content Include="mediumish-html\assets\css\LoginCss.css" />
     <Content Include="mediumish-html\assets\css\mediumish.css" />
     <Content Include="mediumish-html\assets\img\default-img.jpg" />
@@ -101,10 +99,10 @@
     <Content Include="mediumish-html\Default.aspx" />
     <Content Include="mediumish-html\assets\index.html" />
     <Content Include="mediumish-html\assets\post.html" />
+    <Content Include="mediumish-html\eddarticle.aspx" />
     <Content Include="mediumish-html\LoginPage.aspx" />
     <Content Include="mediumish-html\medpost.aspx" />
     <Content Include="Mesagges.aspx" />
-    <Content Include="Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,13 +112,6 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddBlog.aspx.cs">
-      <DependentUpon>AddBlog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddBlog.aspx.designer.cs">
-      <DependentUpon>AddBlog.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminLayout.Master.cs">
       <DependentUpon>AdminLayout.Master</DependentUpon>
@@ -152,27 +143,6 @@
     <Compile Include="Confirmonay.aspx.designer.cs">
       <DependentUpon>Confirmonay.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Layout.Master.cs">
-      <DependentUpon>Layout.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Layout.Master.designer.cs">
-      <DependentUpon>Layout.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginLayout.Master.cs">
       <DependentUpon>LoginLayout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +171,13 @@
     <Compile Include="mediumish-html\DefaultLayout.Master.designer.cs">
       <DependentUpon>DefaultLayout.Master</DependentUpon>
     </Compile>
+    <Compile Include="mediumish-html\eddarticle.aspx.cs">
+      <DependentUpon>eddarticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediumish-html\eddarticle.aspx.designer.cs">
+      <DependentUpon>eddarticle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mediumish-html\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,16 +200,8 @@
       <DependentUpon>Mesagges.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Layout.Master" />
     <Content Include="LoginLayout.Master" />
     <Content Include="AdminLayout.Master" />
     <Content Include="mediumish-html\DefaultLayout.Master" />

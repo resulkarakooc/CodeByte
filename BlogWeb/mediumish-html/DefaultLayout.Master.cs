@@ -12,6 +12,40 @@ namespace BlogWeb.mediumish_html
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
+            {
+                Button1.Text = "Log Out";
+                HyperLink1.Enabled = true;
+
+            }
+            else
+            {
+                Button1.Text = "Log In";
+                HyperLink1.Enabled = false;
+
+            }
+        }
+
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
+            {
+                HyperLink1.Enabled = false;
+                Session["IsUserOnline"] = false;
+                Session.Clear();
+                Button1.Text = "Log In";
+
+                Response.Redirect("LoginPage.aspx");
+            }
+            else
+            {
+                Response.Redirect("LoginPage.aspx");
+
+            }
+
         }
     }
+
 }

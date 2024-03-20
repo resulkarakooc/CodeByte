@@ -8,10 +8,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <form id="form1" runat="server">
+   
 
         <section class="forms-section">
-            <h1 class="section-title">Giriş Yap Veya Kaydol</h1>
+            <h1 runat="server" id="titlee" class="section-titlee">Giriş Yap veya Kaydol</h1>
             <div class="forms">
                 <div class="form-wrapper is-active">
                     <button type="button" class="switcher switcher-login">
@@ -23,14 +23,14 @@
                         <fieldset>
                             <legend>Please, enter your email and password for login.</legend>
                             <div class="input-block">
-                                <label for="login-email">E-mail</label>
-                                <asp:TextBox CssClass="login-email form-control" ID="tbmaill" runat="server"></asp:TextBox>
+                                <label style="margin-bottom:0px;"  for="login-email">E-maıl</label>
+                                <asp:TextBox CssClass="login-email " ID="tbmaill" runat="server"></asp:TextBox>
                                 <!-- -->
 
                             </div>
                             <div class="input-block">
-                                <label for="login-password">Password</label>
-                                <asp:TextBox CssClass="login-password form-control" ID="tbpass" runat="server"></asp:TextBox>
+                                <label style="margin-bottom:0px;"  for="login-password">Password</label>
+                                <asp:TextBox CssClass="login-password " ID="tbpass" runat="server"></asp:TextBox>
                                 <!-- -->
 
                             </div>
@@ -46,40 +46,46 @@
 
 
 
+
                     <div class="form form-signup">
                         <fieldset>
                             <legend>Please, enter your email, password and password confirmation for sign up.</legend>
 
                             <div class="input-block">
-                                <label for="signup-email">Kullanıcı Adı</label>
+                                <label  style="margin-bottom:0px;" for="signup-email register">Kullanıcı Adı</label>
                                 <asp:TextBox CssClass="signup-email " ID="tbname" runat="server"></asp:TextBox>
                             </div>
 
                             <div class="input-block">
-                                <label for="signup-email">E-mail</label>
-                                <asp:TextBox CssClass="signup-email " ID="tbmail" runat="server"></asp:TextBox>
+                                <label style="margin-bottom:0px;"  for="signup-email register">E-mail</label>
+                                <asp:TextBox CssClass="signup-email " ID="tbmail" runat="server" TextMode="Email"></asp:TextBox>
                             </div>
 
                             <div class="input-block">
-                                <label for="signup-password">E-mail</label>
-                                <asp:TextBox CssClass="signup-password " ID="tbbpass" runat="server"></asp:TextBox>
+                                <label style="margin-bottom:0px;" for="signup-password register">Password</label>
+                                <asp:TextBox CssClass="signup-password " ID="tbbpass" runat="server" TextMode="Password"></asp:TextBox>
                             </div>
 
                             <div class="input-block">
-                                <label for="signup-password-confirm">E-mail</label>
-                                <asp:TextBox CssClass="signup-password-confirm " ID="TextBox1" runat="server"></asp:TextBox>
+                                <label style="margin-bottom:0px;" for="signup-password-confirm register">Password Confirm</label>
+                                <asp:TextBox CssClass="signup-password-confirm " ID="tbbpassconfirm" runat="server" TextMode="Password"></asp:TextBox>
                             </div>
 
-
-
-                            
                         </fieldset>
-                        <button type="submit" class="btn-signup">Continue</button>
+
+                        <asp:Button ID="registerbtn" Text="KAYIT OL" CssClass="btn btn-primary" OnClick="registerbtn_click" runat="server" />
+
+                        <style>
+                            .register {
+                                margin-bottom: 0px;
+                            }
+                        </style>
+
                     </div>
                 </div>
             </div>
         </section>
-    </form>
+    
 
     <script>
         const switchers = [...document.querySelectorAll('.switcher')]

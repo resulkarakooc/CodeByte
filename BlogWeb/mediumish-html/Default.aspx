@@ -25,7 +25,7 @@
                         <!-- begin post -->
                         <div class="card">
                             <div class="row">
-                                <div class="col-md-5 wrapthumbnail">
+                                <div class="col-md-5 wrapthumbnail img-resul">
                                     <a href="medpost.aspx?id=<%#Eval("blogID") %>">
                                         <asp:Image CssClass="img-rsl thumbnail" ID="Image2" ImageUrl='<%# Eval("blogImg") %>' runat="server" /></a>
                                 </div>
@@ -70,10 +70,22 @@
                 </asp:ListView>
 
 
+
             </div>
             <style>
+                .img-resul {
+                    width: 300px; /* Örnek olarak bir genişlik belirleyin, istediğiniz genişliği burada ayarlayabilirsiniz */
+                    height: 200px; /* Örnek olarak bir yükseklik belirleyin, istediğiniz yüksekliği burada ayarlayabilirsiniz */
+                    overflow: hidden; /* Kapsayıcının dışına taşan içeriğin gizlenmesi için */
+                    position: relative;
+                }
+
                 .img-rsl {
-                    width: 100%;
+                    position: absolute; /* Mutlak pozisyon kullanarak görüntüyü yerleştirin */
+                    top: 0; /* Görüntüyü kapsayıcının üstüne yerleştirin */
+                    left: 25px; /* Görüntüyü kapsayıcının sağ köşesine yerleştirin */
+                    height: 100%; /* Görüntünün yüksekliğini %100 olarak ayarlayın */
+                    object-fit: cover;
                     /*background-position: top left;*/
                 }
             </style>
@@ -136,7 +148,6 @@
 ================================================== -->
         <div class="footer">
             <p class="pull-left">
-                
                 Copyright &copy; 2024 Resul Karakoç
             </p>
             <p class="pull-right">

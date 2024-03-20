@@ -76,9 +76,7 @@
                                 <asp:Label ID="Label3" runat="server" Text='<%# Eval("bdescription") %>'></asp:Label>
                             </p>
                             <blockquote>
-                                Gen-z strategy long tail churn rate seed money channels user experience incubator
-                                startup partner network low hanging fruit direct mailing. Client backing success 
-                                startup assets responsive web design burn rate A/B testing metrics first mover advantage conversion.
+                               <%# Eval("bflag") %>
                             </blockquote>
                             <p>
                                 Freemium non-disclosure agreement lean startup bootstrapping holy grail ramen MVP iteration accelerator

@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BlogWeb
+namespace BlogWeb.mediumish_html
 {
 
 
-    public partial class Register
+    public partial class eddarticle
     {
 
         /// <summary>
-        /// form1 control.
+        /// pageTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label pageTitle;
 
         /// <summary>
         /// Label1 control.
@@ -33,93 +33,93 @@ namespace BlogWeb
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// lblname control.
+        /// Drdepar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblname;
+        protected global::System.Web.UI.WebControls.DropDownList Drdepar;
 
         /// <summary>
-        /// tbname control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbname;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// lblmail control.
+        /// tbTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmail;
+        protected global::System.Web.UI.WebControls.TextBox tbTitle;
 
         /// <summary>
-        /// tbmail control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbmail;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// lblpass control.
+        /// tbimg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpass;
+        protected global::System.Web.UI.WebControls.TextBox tbimg;
 
         /// <summary>
-        /// tbpass control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbpass;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// lblabout control.
+        /// tbflag control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblabout;
+        protected global::System.Web.UI.WebControls.TextBox tbflag;
 
         /// <summary>
-        /// tbabout control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbabout;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// loginbtn control.
+        /// tbicerik control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginbtn;
+        protected global::System.Web.UI.WebControls.TextBox tbicerik;
 
         /// <summary>
-        /// lblerror control.
+        /// SubmitBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblerror;
+        protected global::System.Web.UI.WebControls.Button SubmitBtn;
     }
 }
