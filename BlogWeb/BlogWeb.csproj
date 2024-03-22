@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminPanel.aspx" />
+    <Content Include="blogSil.aspx" />
     <Content Include="Confirm.aspx" />
     <Content Include="Confirmonay.aspx" />
     <Content Include="css\addBlogCss.css" />
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blogSil.aspx.cs">
+      <DependentUpon>blogSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blogSil.aspx.designer.cs">
+      <DependentUpon>blogSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\Sha256converter.cs" />
     <Compile Include="Classes\SqlConnectClass.cs" />

@@ -131,6 +131,8 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <asp:Button ID="SaveBtn" CssClass="btn btn-info" runat="server" Text="Kaydet" OnClick="SaveBtn_Click" />
+                                    <%--<button class="btn btn-warning" OnClick="" >Şifre Değiştir</button>--%>
+
                                 </div>
                             </div>
                         </div>
@@ -142,6 +144,6 @@
         </div>
 
     </div>
-
+    
 
 </asp:Content>

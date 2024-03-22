@@ -6,7 +6,7 @@
  ================================================== -->
     <div class="container">
         <div class="mainheading">
-            <h1 class="sitetitle">Mediumish</h1>
+            <h1 class="sitetitle">TechByte</h1>
             <p class="lead">
                 Bootstrap theme, medium style, simply perfect for bloggers
             </p>

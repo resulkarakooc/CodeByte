@@ -34,7 +34,7 @@
                     <asp:Label AssociatedControlID="tbicerik" ID="Label5" runat="server" Text="Makale"></asp:Label>
                     <asp:TextBox ID="tbicerik" CssClass="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </div>
-                <asp:Button ID="SubmitBtn" runat="server" CssClass="btn btn-success" OnClick="SubmitBtn_Click" Text="Button" />
+                <asp:Button ID="SubmitBtn" runat="server" CssClass="btn btn-success" OnClick="SubmitBtn_Click" Text="Yayınla" />
 
             </div>
 

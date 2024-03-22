@@ -14,16 +14,17 @@ namespace BlogWeb.mediumish_html
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int writerID = Convert.ToInt32(Session["WriterID"]);
 
 
             if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
             {
                 //no  problem
-                SqlCommand profil = new SqlCommand("select * from Table_writer where writerID=@pid",SqlConnectClass.connection);
+                SqlCommand profil = new SqlCommand("select * from Table_writer where writerID=@pid", SqlConnectClass.connection);
 
                 SqlConnectClass.checkconnection();
 
-                int writerID = Convert.ToInt32(Session["WriterID"]);
+
                 profil.Parameters.AddWithValue("@pid", writerID);
 
                 SqlDataReader getir = profil.ExecuteReader();
@@ -32,7 +33,7 @@ namespace BlogWeb.mediumish_html
                 ListView1.DataBind();
 
                 getir.Close();
-               
+
 
             }
             else
@@ -40,13 +41,34 @@ namespace BlogWeb.mediumish_html
                 Response.Redirect("LoginPage.aspx");
             }
 
-            
+
+            SqlCommand cmdlist = new SqlCommand("Select blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
+                " bdescription, b.bdate, bConfirmation ,w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+                " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirm and w.writerID=@ppid", SqlConnectClass.connection);
+
+            SqlConnectClass.checkconnection();
+
+            cmdlist.Parameters.AddWithValue("@confirm", true);
+            cmdlist.Parameters.AddWithValue("@ppid", writerID);
+
+            SqlDataReader oku = cmdlist.ExecuteReader();
+
+            //using (oku)  gerektiğinde kullan code for emergency
+            //{
+            ListView2.DataSource = oku;
+            ListView2.DataBind();
+
+            oku.Close();
+
+          
+
+
 
 
 
 
         }
 
-
+        
     }
 }
