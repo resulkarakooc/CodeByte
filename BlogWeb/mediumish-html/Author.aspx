@@ -22,7 +22,7 @@
                                     <a target="_blank" href="https://twitter.com/wowthemesnet" class="btn follow">Follow</a>
                                 </div>
                                 <div class="col-md-2 col-xs-12">
-                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal">
+                                    <img class="author-thumb" src='<%#Eval("writerImg") %>' alt="Sal">
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                         <div class="wrapfooter">
                                             <span class="meta-footer-thumb">
                                                 <a href="author.html">
-                                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+                                                    <img class="author-thumb"src='<%#Eval("writerImg") %>' alt="Sal"></a>
                                             </span>
                                             <span class="author-meta">
                                                 <span class="post-name"><a href="Author.aspx?id=<%#Eval("writerID") %>"><%#Eval("writerName") %></a></span><br />
@@ -83,7 +83,7 @@
     <!-- Begin Twitter Timeline
 ================================================== -->
     <div class="container margtop3rem">
-        <a class="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776">WowThemesNet Tweets</a>
+        
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <!-- End Twitter Timeline

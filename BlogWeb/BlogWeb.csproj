@@ -72,7 +72,9 @@
     <Content Include="Confirm.aspx" />
     <Content Include="Confirmonay.aspx" />
     <Content Include="css\addBlogCss.css" />
+    <Content Include="css\ErrorStyle.css" />
     <Content Include="css\Homestyle.css" />
+    <Content Include="css\profilStyle.css" />
     <Content Include="mediumish-html\assets\css\bootstrap.min.css" />
     <Content Include="mediumish-html\assets\css\eddformstyle.css" />
     <Content Include="mediumish-html\assets\css\LoginCss.css" />
@@ -100,8 +102,11 @@
     <Content Include="mediumish-html\assets\index.html" />
     <Content Include="mediumish-html\assets\post.html" />
     <Content Include="mediumish-html\eddarticle.aspx" />
+    <Content Include="mediumish-html\editprofile.aspx" />
+    <Content Include="mediumish-html\Error404.aspx" />
     <Content Include="mediumish-html\LoginPage.aspx" />
     <Content Include="mediumish-html\medpost.aspx" />
+    <Content Include="mediumish-html\profil.aspx" />
     <Content Include="Mesagges.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -143,13 +148,6 @@
     <Compile Include="Confirmonay.aspx.designer.cs">
       <DependentUpon>Confirmonay.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginLayout.Master.cs">
-      <DependentUpon>LoginLayout.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginLayout.Master.designer.cs">
-      <DependentUpon>LoginLayout.Master</DependentUpon>
-    </Compile>
     <Compile Include="mediumish-html\Author.aspx.cs">
       <DependentUpon>Author.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -178,6 +176,20 @@
     <Compile Include="mediumish-html\eddarticle.aspx.designer.cs">
       <DependentUpon>eddarticle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mediumish-html\editprofile.aspx.cs">
+      <DependentUpon>editprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediumish-html\editprofile.aspx.designer.cs">
+      <DependentUpon>editprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mediumish-html\Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediumish-html\Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mediumish-html\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -192,6 +204,13 @@
     <Compile Include="mediumish-html\medpost.aspx.designer.cs">
       <DependentUpon>medpost.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mediumish-html\profil.aspx.cs">
+      <DependentUpon>profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediumish-html\profil.aspx.designer.cs">
+      <DependentUpon>profil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mesagges.aspx.cs">
       <DependentUpon>Mesagges.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,7 +221,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LoginLayout.Master" />
     <Content Include="AdminLayout.Master" />
     <Content Include="mediumish-html\DefaultLayout.Master" />
     <None Include="packages.config" />

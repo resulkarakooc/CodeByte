@@ -43,7 +43,7 @@ namespace BlogWeb.mediumish_html
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
-            SqlCommand adddata = new SqlCommand("Insert into Table_blog (writerID, blogTitle, deparID,  blogImg, bdescription, bflag) values (@pyazar, @ptitle, @palan, @pphoto ,@pdesc, @pflag)", SqlConnectClass.connection);
+            SqlCommand adddata = new SqlCommand("Insert into Table_blog (writerID, blogTitle, deparID,  blogImg, bdescription, bflag, bdate) values (@pyazar, @ptitle, @palan, @pphoto ,@pdesc, @pflag, CONVERT(VARCHAR(10),GETDATE(),104))", SqlConnectClass.connection);
 
             SqlConnectClass.checkconnection();
 

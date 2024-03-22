@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="BlogWeb.About" %>
+﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/AdminLayout.Master" AutoEventWireup ="true" CodeBehind="About.aspx.cs" Inherits="BlogWeb.About" %>
 
 
 
@@ -6,7 +6,7 @@
     <div class="arean">
         <div style="margin: 2%;" class="container">
 
-            <form id="form1" runat="server">
+            
                 <asp:Label ID="Label1" runat="server" CssClass="iletisim-title" Text="İletişim"></asp:Label>
                 <br />
                 <br />
@@ -20,7 +20,7 @@
                 <asp:TextBox ID="TextBox3" CssClass="form-group form-control contact" runat="server" Height="227px" TextMode="MultiLine" Width="297px"></asp:TextBox>
                 <br />
                 <asp:Button ID="ContactButon" CssClass="btn btn-primary" runat="server" OnClick="ContactButon_Click" Text="Gonder" />
-            </form>
+            
 
         </div>
 

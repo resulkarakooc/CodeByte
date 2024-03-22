@@ -3,89 +3,103 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <link rel="stylesheet" href="assets/css/LoginCss.css" />
 
+
 </asp:Content>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-   
 
-        <section class="forms-section">
-            <h1 runat="server" id="titlee" class="section-titlee">Giriş Yap veya Kaydol</h1>
-            <div class="forms">
-                <div class="form-wrapper is-active">
-                    <button type="button" class="switcher switcher-login">
-                        Login
+
+    <section class="forms-section">
+        <h1 runat="server" id="titlee" class="section-titlee">Giriş Yap veya Kaydol</h1>
+        <div class="forms">
+            <div class="form-wrapper is-active">
+                <button type="button" class="switcher switcher-login">
+                    Login
         <span class="underline"></span>
-                    </button>
-                    <div class="form form-login">
+                </button>
+                <div class="form form-login">
 
-                        <fieldset>
-                            <legend>Please, enter your email and password for login.</legend>
-                            <div class="input-block">
-                                <label style="margin-bottom:0px;"  for="login-email">E-maıl</label>
-                                <asp:TextBox CssClass="login-email " ID="tbmaill" runat="server"></asp:TextBox>
-                                <!-- -->
+                    <fieldset>
+                        <legend>Please, enter your email and password for login.</legend>
+                        <div class="input-block">
 
-                            </div>
-                            <div class="input-block">
-                                <label style="margin-bottom:0px;"  for="login-password">Password</label>
-                                <asp:TextBox CssClass="login-password " ID="tbpass" runat="server"></asp:TextBox>
-                                <!-- -->
+                            <asp:Label AssociatedControlID="tbmaill" ID="Label3" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="E-mail:"></asp:Label>
+                            <asp:TextBox ID="tbmaill" AutoCompleteType="Email" TextMode="Email" placeholder="name@example.com" CssClass="form-group form-control login-email" runat="server"></asp:TextBox>
 
-                            </div>
-                        </fieldset>
-                        <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" OnClick="ButtonLogin_Click" Text="Giris" />
-                    </div>
-                </div>
-                <div class="form-wrapper">
-                    <button type="button" class="switcher switcher-signup">
-                        Sign Up
-        <span class="underline"></span>
-                    </button>
+
+                        </div>
+                        <div class="input-block">
+                            <asp:Label AssociatedControlID="tbpass" ID="Label2" runat="server" CssClass="" Text="Şifre:"></asp:Label>
+                            <asp:TextBox ID="tbpass" CssClass="form-group form-control login-password" Style="margin-top: 0px;" TextMode="Password" runat="server"></asp:TextBox>
 
 
 
-
-                    <div class="form form-signup">
-                        <fieldset>
-                            <legend>Please, enter your email, password and password confirmation for sign up.</legend>
-
-                            <div class="input-block">
-                                <label  style="margin-bottom:0px;" for="signup-email register">Kullanıcı Adı</label>
-                                <asp:TextBox CssClass="signup-email " ID="tbname" runat="server"></asp:TextBox>
-                            </div>
-
-                            <div class="input-block">
-                                <label style="margin-bottom:0px;"  for="signup-email register">E-mail</label>
-                                <asp:TextBox CssClass="signup-email " ID="tbmail" runat="server" TextMode="Email"></asp:TextBox>
-                            </div>
-
-                            <div class="input-block">
-                                <label style="margin-bottom:0px;" for="signup-password register">Password</label>
-                                <asp:TextBox CssClass="signup-password " ID="tbbpass" runat="server" TextMode="Password"></asp:TextBox>
-                            </div>
-
-                            <div class="input-block">
-                                <label style="margin-bottom:0px;" for="signup-password-confirm register">Password Confirm</label>
-                                <asp:TextBox CssClass="signup-password-confirm " ID="tbbpassconfirm" runat="server" TextMode="Password"></asp:TextBox>
-                            </div>
-
-                        </fieldset>
-
-                        <asp:Button ID="registerbtn" Text="KAYIT OL" CssClass="btn btn-primary" OnClick="registerbtn_click" runat="server" />
-
-                        <style>
-                            .register {
-                                margin-bottom: 0px;
-                            }
-                        </style>
-
-                    </div>
+                        </div>
+                    </fieldset>
+                    <asp:Button ID="Button1" CssClass="btn btn-primary form-control" runat="server" OnClick="ButtonLogin_Click" Text="Giris" />
                 </div>
             </div>
-        </section>
-    
+            <div class="form-wrapper">
+                <button type="button" class="switcher switcher-signup">
+                    Sign Up
+        <span class="underline"></span>
+                </button>
+
+
+
+
+                <div class="form form-signup">
+                    <fieldset>
+                        <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+
+                        <div class="input-block">
+                            <asp:Label AssociatedControlID="tbname" ID="Label1" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Kullanıcı Adı:"></asp:Label>
+                            <asp:TextBox ID="tbname" AutoCompleteType="FirstName" TextMode="SingleLine" placeholder="name" CssClass="form-group form-control sign-email" runat="server"></asp:TextBox>
+                            <%--<label style="margin-bottom: 0px;" for="signup-email register">Kullanıcı Adı</label>
+                            <asp:TextBox CssClass="signup-email " ID="tbname" runat="server"></asp:TextBox>--%>
+                        </div>
+
+                        <div class="input-block">
+                            <asp:Label AssociatedControlID="tbmail" ID="Label4" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="E-mail:"></asp:Label>
+                            <asp:TextBox ID="tbmail" AutoCompleteType="Email" TextMode="Email" placeholder="name@example.com" CssClass="form-group form-control signup-email" runat="server"></asp:TextBox>
+
+                            <%-- <label style="margin-bottom: 0px;" for="signup-email register">E-mail</label>
+                            <asp:TextBox CssClass="signup-email" ID="tbmail" runat="server" TextMode="Email"></asp:TextBox>--%>
+                        </div>
+
+                        <div class="input-block">
+                            <asp:Label AssociatedControlID="tbbpass" ID="Label5" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Password"></asp:Label>
+                            <asp:TextBox ID="tbbpass"  TextMode="Password"  CssClass="form-group form-control signup-password" runat="server"></asp:TextBox>
+
+                            <%--<label style="margin-bottom: 0px;" for="signup-password register">Password</label>
+                            <asp:TextBox CssClass="signup-password " ID="tbbpass" runat="server" TextMode="Password"></asp:TextBox>--%>
+                        </div>
+
+                        <div class="input-block">
+                            <asp:Label AssociatedControlID="tbbpassconfirm" ID="Label6" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Password Confirm"></asp:Label>
+                            <asp:TextBox ID="tbbpassconfirm" AutoCompleteType="Email" TextMode="Password"  CssClass="form-group form-control login-email" runat="server"></asp:TextBox>
+
+                            <%-- <label style="margin-bottom: 0px;" for="signup-password-confirm register">Password Confirm</label>
+                            <asp:TextBox CssClass="signup-password-confirm " ID="tbbpassconfirm" runat="server" TextMode="Password"></asp:TextBox>--%>
+                        </div>
+
+                    </fieldset>
+
+                    <asp:Button ID="registerbtn" Text="KAYIT OL" CssClass="btn btn-primary" OnClick="registerbtn_click" runat="server" />
+
+                    <style>
+                        .register {
+                            margin-bottom: 0px;
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script>
         const switchers = [...document.querySelectorAll('.switcher')]

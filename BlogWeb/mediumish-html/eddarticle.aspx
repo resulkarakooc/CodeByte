@@ -3,11 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <!--head içerik-->
 </asp:Content>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container" >
 
-        <asp:Label ID="pageTitle" CssClass="pageTitle" runat="server" Text="Yeni Makale Oluştur"></asp:Label>
+        <h1><asp:Label ID="pageTitle" CssClass="pageTitle" runat="server" Text="Yeni Makale Oluştur"></asp:Label></h1>
 
         
             <div style="width:80%;">

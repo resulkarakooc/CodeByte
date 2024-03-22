@@ -15,14 +15,14 @@ namespace BlogWeb.mediumish_html
             if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
             {
                 Button1.Text = "Log Out";
-                HyperLink1.Enabled = true;
+                prolink1.Visible = true;
 
             }
             else
             {
                 Button1.Text = "Log In";
-                HyperLink1.Enabled = false;
-
+                prolink1.Text.Remove(0);
+                prolink1.Visible = false;
             }
         }
 
@@ -32,7 +32,7 @@ namespace BlogWeb.mediumish_html
         {
             if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
             {
-                HyperLink1.Enabled = false;
+                prolink1.Visible = false;
                 Session["IsUserOnline"] = false;
                 Session.Clear();
                 Button1.Text = "Log In";
@@ -44,8 +44,7 @@ namespace BlogWeb.mediumish_html
                 Response.Redirect("LoginPage.aspx");
 
             }
-
         }
-    }
 
+    }
 }
