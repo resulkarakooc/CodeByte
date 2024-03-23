@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <h1>Onay Bekleyen Makaleler</h1>
+
     <asp:DataList ID="DataList1" runat="server">
         <itemtemplate>
             <table class="table table-bordered" style="width: 100%" >

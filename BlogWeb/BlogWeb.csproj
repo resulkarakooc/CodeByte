@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminPanel.aspx" />
-    <Content Include="blogSil.aspx" />
     <Content Include="Confirm.aspx" />
     <Content Include="Confirmonay.aspx" />
     <Content Include="css\addBlogCss.css" />
@@ -99,6 +98,7 @@
     <Content Include="mediumish-html\assets\js\mediumish.js" />
     <Content Include="mediumish-html\assets\author.html" />
     <Content Include="mediumish-html\Author.aspx" />
+    <Content Include="mediumish-html\blogSil.aspx" />
     <Content Include="mediumish-html\Default.aspx" />
     <Content Include="mediumish-html\assets\index.html" />
     <Content Include="mediumish-html\assets\post.html" />
@@ -133,13 +133,6 @@
     <Compile Include="AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="blogSil.aspx.cs">
-      <DependentUpon>blogSil.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="blogSil.aspx.designer.cs">
-      <DependentUpon>blogSil.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Classes\Sha256converter.cs" />
     <Compile Include="Classes\SqlConnectClass.cs" />
     <Compile Include="Confirm.aspx.cs">
@@ -162,6 +155,13 @@
     </Compile>
     <Compile Include="mediumish-html\Author.aspx.designer.cs">
       <DependentUpon>Author.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mediumish-html\blogSil.aspx.cs">
+      <DependentUpon>blogSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediumish-html\blogSil.aspx.designer.cs">
+      <DependentUpon>blogSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="mediumish-html\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

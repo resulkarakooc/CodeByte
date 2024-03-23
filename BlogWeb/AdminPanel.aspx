@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminLayout.Master" AutoEventWireup="true" CodeBehind="AdminPanel.aspx.cs" Inherits="BlogWeb.AdminPanel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
+    <h1>Gelen Mesajlar</h1>
+
+
     <asp:DataList ID="DataList1" runat="server" CssClass="tablom">
         <ItemTemplate>
             <table class="table table-bordered tabtab" style="width: 100%">

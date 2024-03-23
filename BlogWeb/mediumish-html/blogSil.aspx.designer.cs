@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BlogWeb
+namespace BlogWeb.mediumish_html
 {
 
 
