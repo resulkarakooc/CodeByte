@@ -18,7 +18,7 @@ body {
 
 .sec-center {
     position: relative;
-    max-width: 75%;
+    max-width: 90%;
     text-align: center;
     z-index: 200;
 }
@@ -130,18 +130,16 @@ body {
     height: 50px;
     transition: all 200ms linear;
     border-radius: 4px;
-    width: 220px;
+    width: 200px;
     letter-spacing: 1px;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
+    
     align-items: center;
     -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
+    justify-content: center;
     justify-content: center;
     -ms-flex-pack: center;
     text-align: center;

@@ -549,5 +549,7 @@ ul.tags {
 .card-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    padding:0.5rem !important;
+    padding-left:0 !important;
 }

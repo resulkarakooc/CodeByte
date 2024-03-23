@@ -43,8 +43,9 @@ namespace BlogWeb.mediumish_html
 
 
             SqlCommand cmdlist = new SqlCommand("Select blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
-                " bdescription, b.bdate,CASE  WHEN b.bConfirmation = 1 THEN 'Onaylandı'  ELSE 'Admin onayı bekleniyor'    END AS bConfirmationText, w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
-                " w.writerID inner join Table_depart d on b.deparID= d.deparID where w.writerID=@ppid", SqlConnectClass.connection);
+                " bdescription, b.bdate,CASE  WHEN b.bConfirmation = 1 THEN 'Onaylandı'  ELSE 'Admin onayı bekleniyor'  " +
+                "  END AS bConfirmationText, w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+                " w.writerID inner join Table_depart d on b.deparID= d.deparID where w.writerID=@ppid order by b.bdate  " , SqlConnectClass.connection);
 
             SqlConnectClass.checkconnection();
 

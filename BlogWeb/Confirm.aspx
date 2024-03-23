@@ -21,7 +21,7 @@
                         <asp:Label ID="Label4" runat="server" Text='<%# Eval("blogImg") %>'></asp:Label>
                     </td>
                     <td style="width:50%;">
-                        <asp:Label ID="Label5" runat="server" Text='<%# Eval("bdescription") %>'></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text='<%# Eval("aciklama") %>'></asp:Label>
                     </td>
                     <td>
                         <a href="Confirmonay.aspx?id=<%#Eval("blogID") %>"><div class="btn btn-warning">Onayla</div></a>

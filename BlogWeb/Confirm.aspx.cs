@@ -16,7 +16,8 @@ namespace BlogWeb
             if (Convert.ToBoolean(Session["IsUserAdmin"]) == true)
             {
 
-                SqlCommand confirm = new SqlCommand("Select blogID , b.writerID , b.deparID ,blogTitle , blogImg , bdescription , bConfirmation ,w.writerID ,writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID = w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirm ", SqlConnectClass.connection);
+                SqlCommand confirm = new SqlCommand("Select blogID , b.writerID , b.deparID ,blogTitle , blogImg ,CONCAT(SUBSTRING(bdescription, 1, 90), '...') AS aciklama, bConfirmation ,w.writerID ,writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on " +
+                    " b.writerID = w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirm  ", SqlConnectClass.connection);
 
                 SqlConnectClass.checkconnection();
 

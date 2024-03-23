@@ -18,7 +18,7 @@ namespace BlogWeb.mediumish_html
             {
 
                 SqlCommand cmdlist = new SqlCommand("Select TOP 6 blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
-                    "CONCAT(SUBSTRING(bdescription, 1, 90), '...') AS aciklama, bConfirmation, b.bdate ,w.writerID , w.writerImg, writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+                    "CONCAT(SUBSTRING(bdescription, 1, 70), '...') AS aciklama, bConfirmation, b.bdate ,w.writerID , w.writerImg, writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
                     " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirm ORDER BY NEWID(); ", SqlConnectClass.connection);
 
                 SqlConnectClass.checkconnection();
@@ -56,7 +56,7 @@ namespace BlogWeb.mediumish_html
                 int selectedid = Convert.ToInt32(Request.QueryString["dp"]);
 
                 SqlCommand cmdlist = new SqlCommand("Select TOP 6 blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
-                    "CONCAT(SUBSTRING(bdescription, 1, 90), '...') AS aciklama, bConfirmation, b.bdate ,w.writerID , w.writerImg, writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+                    "CONCAT(SUBSTRING(bdescription, 1, 70), '...') AS aciklama, bConfirmation, b.bdate ,w.writerID , w.writerImg, writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
                     " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirm and b.deparID=@dip ORDER BY NEWID(); ", SqlConnectClass.connection);
 
                 SqlConnectClass.checkconnection();
