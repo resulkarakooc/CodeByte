@@ -76,6 +76,7 @@
     <Content Include="css\Homestyle.css" />
     <Content Include="css\profilStyle.css" />
     <Content Include="mediumish-html\assets\css\bootstrap.min.css" />
+    <Content Include="mediumish-html\assets\css\drodown.css" />
     <Content Include="mediumish-html\assets\css\eddformstyle.css" />
     <Content Include="mediumish-html\assets\css\LoginCss.css" />
     <Content Include="mediumish-html\assets\css\mediumish.css" />
