@@ -75,40 +75,40 @@
     <Content Include="css\ErrorStyle.css" />
     <Content Include="css\Homestyle.css" />
     <Content Include="css\profilStyle.css" />
-    <Content Include="mediumish-html\assets\css\bootstrap.min.css" />
-    <Content Include="mediumish-html\assets\css\drodown.css" />
-    <Content Include="mediumish-html\assets\css\eddformstyle.css" />
-    <Content Include="mediumish-html\assets\css\LoginCss.css" />
-    <Content Include="mediumish-html\assets\css\mediumish.css" />
-    <Content Include="mediumish-html\assets\img\default-img.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\1.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\10.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\2.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\3.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\4.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\5.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\6.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\7.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\8.jpg" />
-    <Content Include="mediumish-html\assets\img\demopic\9.jpg" />
-    <Content Include="mediumish-html\assets\img\favicon.ico" />
-    <Content Include="mediumish-html\assets\img\logo.png" />
-    <Content Include="mediumish-html\assets\js\bootstrap.min.js" />
-    <Content Include="mediumish-html\assets\js\ie10-viewport-bug-workaround.js" />
-    <Content Include="mediumish-html\assets\js\jquery.min.js" />
-    <Content Include="mediumish-html\assets\js\mediumish.js" />
-    <Content Include="mediumish-html\assets\author.html" />
-    <Content Include="mediumish-html\Author.aspx" />
-    <Content Include="mediumish-html\blogSil.aspx" />
-    <Content Include="mediumish-html\Default.aspx" />
-    <Content Include="mediumish-html\assets\index.html" />
-    <Content Include="mediumish-html\assets\post.html" />
-    <Content Include="mediumish-html\eddarticle.aspx" />
-    <Content Include="mediumish-html\editprofile.aspx" />
-    <Content Include="mediumish-html\Error404.aspx" />
-    <Content Include="mediumish-html\LoginPage.aspx" />
-    <Content Include="mediumish-html\medpost.aspx" />
-    <Content Include="mediumish-html\profil.aspx" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\drodown.css" />
+    <Content Include="assets\css\eddformstyle.css" />
+    <Content Include="assets\css\LoginCss.css" />
+    <Content Include="assets\css\mediumish.css" />
+    <Content Include="assets\img\default-img.jpg" />
+    <Content Include="assets\img\demopic\1.jpg" />
+    <Content Include="assets\img\demopic\10.jpg" />
+    <Content Include="assets\img\demopic\2.jpg" />
+    <Content Include="assets\img\demopic\3.jpg" />
+    <Content Include="assets\img\demopic\4.jpg" />
+    <Content Include="assets\img\demopic\5.jpg" />
+    <Content Include="assets\img\demopic\6.jpg" />
+    <Content Include="assets\img\demopic\7.jpg" />
+    <Content Include="assets\img\demopic\8.jpg" />
+    <Content Include="assets\img\demopic\9.jpg" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\mediumish.js" />
+    <Content Include="assets\author.html" />
+    <Content Include="Author.aspx" />
+    <Content Include="blogSil.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="assets\index.html" />
+    <Content Include="assets\post.html" />
+    <Content Include="eddarticle.aspx" />
+    <Content Include="editprofile.aspx" />
+    <Content Include="Error404.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="medpost.aspx" />
+    <Content Include="profil.aspx" />
     <Content Include="Mesagges.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -150,74 +150,74 @@
     <Compile Include="Confirmonay.aspx.designer.cs">
       <DependentUpon>Confirmonay.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\Author.aspx.cs">
+    <Compile Include="Author.aspx.cs">
       <DependentUpon>Author.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\Author.aspx.designer.cs">
+    <Compile Include="Author.aspx.designer.cs">
       <DependentUpon>Author.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\blogSil.aspx.cs">
+    <Compile Include="blogSil.aspx.cs">
       <DependentUpon>blogSil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\blogSil.aspx.designer.cs">
+    <Compile Include="blogSil.aspx.designer.cs">
       <DependentUpon>blogSil.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\Default.aspx.cs">
+    <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\Default.aspx.designer.cs">
+    <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\DefaultLayout.Master.cs">
+    <Compile Include="DefaultLayout.Master.cs">
       <DependentUpon>DefaultLayout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\DefaultLayout.Master.designer.cs">
+    <Compile Include="DefaultLayout.Master.designer.cs">
       <DependentUpon>DefaultLayout.Master</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\eddarticle.aspx.cs">
+    <Compile Include="eddarticle.aspx.cs">
       <DependentUpon>eddarticle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\eddarticle.aspx.designer.cs">
+    <Compile Include="eddarticle.aspx.designer.cs">
       <DependentUpon>eddarticle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\editprofile.aspx.cs">
+    <Compile Include="editprofile.aspx.cs">
       <DependentUpon>editprofile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\editprofile.aspx.designer.cs">
+    <Compile Include="editprofile.aspx.designer.cs">
       <DependentUpon>editprofile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\Error404.aspx.cs">
+    <Compile Include="Error404.aspx.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\Error404.aspx.designer.cs">
+    <Compile Include="Error404.aspx.designer.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\LoginPage.aspx.cs">
+    <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\LoginPage.aspx.designer.cs">
+    <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\medpost.aspx.cs">
+    <Compile Include="medpost.aspx.cs">
       <DependentUpon>medpost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\medpost.aspx.designer.cs">
+    <Compile Include="medpost.aspx.designer.cs">
       <DependentUpon>medpost.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mediumish-html\profil.aspx.cs">
+    <Compile Include="profil.aspx.cs">
       <DependentUpon>profil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mediumish-html\profil.aspx.designer.cs">
+    <Compile Include="profil.aspx.designer.cs">
       <DependentUpon>profil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mesagges.aspx.cs">
@@ -231,7 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLayout.Master" />
-    <Content Include="mediumish-html\DefaultLayout.Master" />
+    <Content Include="DefaultLayout.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -240,7 +240,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="mediumish-html\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
