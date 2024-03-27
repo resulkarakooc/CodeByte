@@ -309,7 +309,6 @@ body {
     -ms-flex-pack: distribute;
     cursor: pointer;
 }
-
     .dropdown-sub:checked + label .uil,
     .dropdown-sub:not(:checked) + label .uil {
         font-size: 22px;

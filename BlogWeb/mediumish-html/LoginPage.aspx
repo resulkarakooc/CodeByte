@@ -3,6 +3,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <link rel="stylesheet" href="assets/css/LoginCss.css" />
 
+    <script>
+        function checkTextBoxes() {
+            var textBox1Value = document.getElementById("<%= tbname.ClientID %>").value;
+            var textBox2Value = document.getElementById("<%= tbmail.ClientID %>").value;
+            var buton = document.getElementById("<%# registerbtn.ClientID%>")
+
+            if (textBox1Value.trim() === "" || textBox2Value.trim() === "") {
+                alert("Lütfen tüm alanları doldurun.");
+                return false;
+            }
+            else {
+                
+            }
+        }
+
+    </script>
 
 </asp:Content>
 
@@ -38,7 +54,7 @@
 
                         </div>
                     </fieldset>
-                    <asp:Button ID="Button1" CssClass="btn btn-primary form-control" runat="server" OnClick="ButtonLogin_Click" Text="Giris" />
+                    <asp:Button ID="Button1" CssClass="btn btn-primary form-control" runat="server" OnClick="ButtonLogin_Click" OnClientClick="showAlertDialog();" Text="Giris" />
                 </div>
             </div>
             <div class="form-wrapper">
@@ -57,42 +73,37 @@
                         <div class="input-block">
                             <asp:Label AssociatedControlID="tbname" ID="Label1" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Kullanıcı Adı:"></asp:Label>
                             <asp:TextBox ID="tbname" AutoCompleteType="FirstName" TextMode="SingleLine" placeholder="name" CssClass="form-group form-control sign-email" runat="server"></asp:TextBox>
-                            <%--<label style="margin-bottom: 0px;" for="signup-email register">Kullanıcı Adı</label>
-                            <asp:TextBox CssClass="signup-email " ID="tbname" runat="server"></asp:TextBox>--%>
+                           
                         </div>
 
                         <div class="input-block">
                             <asp:Label AssociatedControlID="tbmail" ID="Label4" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="E-mail:"></asp:Label>
                             <asp:TextBox ID="tbmail" AutoCompleteType="Email" TextMode="Email" placeholder="name@example.com" CssClass="form-group form-control signup-email" runat="server"></asp:TextBox>
 
-                            <%-- <label style="margin-bottom: 0px;" for="signup-email register">E-mail</label>
-                            <asp:TextBox CssClass="signup-email" ID="tbmail" runat="server" TextMode="Email"></asp:TextBox>--%>
                         </div>
 
                         <div class="input-block">
                             <asp:Label AssociatedControlID="tbbpass" ID="Label5" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Password"></asp:Label>
                             <asp:TextBox ID="tbbpass"  TextMode="Password"  CssClass="form-group form-control signup-password" runat="server"></asp:TextBox>
 
-                            <%--<label style="margin-bottom: 0px;" for="signup-password register">Password</label>
-                            <asp:TextBox CssClass="signup-password " ID="tbbpass" runat="server" TextMode="Password"></asp:TextBox>--%>
                         </div>
 
                         <div class="input-block">
                             <asp:Label AssociatedControlID="tbbpassconfirm" ID="Label6" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Password Confirm"></asp:Label>
                             <asp:TextBox ID="tbbpassconfirm" AutoCompleteType="Email" TextMode="Password"  CssClass="form-group form-control login-email" runat="server"></asp:TextBox>
 
-                            <%-- <label style="margin-bottom: 0px;" for="signup-password-confirm register">Password Confirm</label>
-                            <asp:TextBox CssClass="signup-password-confirm " ID="tbbpassconfirm" runat="server" TextMode="Password"></asp:TextBox>--%>
                         </div>
 
                     </fieldset>
 
-                    <asp:Button ID="registerbtn" Text="KAYIT OL" CssClass="btn btn-primary" OnClick="registerbtn_click" runat="server" />
+                    <asp:Button ID="registerbtn" Text="KAYIT OL" CssClass="btn btn-primary" OnClick="registerbtn_click" OnClientClick="checkTextBoxes();" runat="server" />
 
                     <style>
+
                         .register {
                             margin-bottom: 0px;
                         }
+
                     </style>
 
                 </div>

@@ -155,6 +155,7 @@ namespace BlogWeb.mediumish_html
         }
 
         // E-posta adresinin benzersiz olup olmadığını kontrol et
+
         private bool IsEmailUnique(string email)
         {
             SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Table_writer WHERE writerMail = @email", SqlConnectClass.connection);
