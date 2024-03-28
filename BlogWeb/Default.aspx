@@ -210,16 +210,7 @@
         </section>
         <!-- Begin Footer
 ================================================== -->
-        <div class="footer">
-            <p class="pull-left">
-                Copyright &copy; 2024 Resul Karakoç
-            </p>
-            <p class="pull-right">
-                Mediumish developer by <a target="_blank" href="#">Resul Karakoç</a>
-            </p>
-            <div class="clearfix">
-            </div>
-        </div>
+       
         <!-- End Footer
 ================================================== -->
 

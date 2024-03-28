@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediumish-html/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="Author.aspx.cs" Inherits="BlogWeb.mediumish_html.Author" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="Author.aspx.cs" Inherits="BlogWeb.mediumish_html.Author" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ListView ID="ListView1" runat="server">

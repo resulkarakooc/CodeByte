@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediumish-html/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="eddarticle.aspx.cs" Inherits="BlogWeb.mediumish_html.eddarticle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="eddarticle.aspx.cs" Inherits="BlogWeb.mediumish_html.eddarticle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <!--head içerik-->

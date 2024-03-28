@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediumish-html/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="editprofile.aspx.cs" Inherits="BlogWeb.mediumish_html.editprofile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="editprofile.aspx.cs" Inherits="BlogWeb.mediumish_html.editprofile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <link rel="stylesheet" href="../css/profilStyle.css" />

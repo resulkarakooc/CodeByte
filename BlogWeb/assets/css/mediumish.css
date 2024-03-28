@@ -251,6 +251,12 @@ span.post-read-more {
     margin-right: 5px;
 }
 
+/*.mainheading{
+    width:20%;
+    background-color:bisque;
+    height:100%;
+}*/
+
 .mainheading h1.sitetitle {
     font-family: Righteous;
 }
@@ -490,7 +496,7 @@ ul.tags {
     color: rgba(0,0,0,.5);
 }
 
-.form-control::-ms-input-placeholder {
+.form-control:-ms-input-placeholder {
     color: rgba(0,0,0,.5);
 }
 
@@ -551,5 +557,5 @@ ul.tags {
     flex-direction: column;
     justify-content: space-between;
     padding:0.5rem !important;
-    padding-left:0 !important;
+    
 }

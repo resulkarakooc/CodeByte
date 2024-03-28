@@ -11,6 +11,8 @@ namespace BlogWeb.mediumish_html
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
 
             if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
             {
@@ -46,5 +48,19 @@ namespace BlogWeb.mediumish_html
             }
         }
 
+        protected void btnsearch_Click(object sender, EventArgs e)
+        {
+            if (search.Text!="")
+            {
+                Session["search"] = search.Text;
+                Response.Redirect("search.aspx");
+
+            }
+            else
+            {
+                search.Attributes["placeholder"] = "Buraya yaz :)";
+            }
+
+        }
     }
 }

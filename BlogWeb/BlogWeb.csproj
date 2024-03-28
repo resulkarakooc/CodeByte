@@ -69,10 +69,14 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminPanel.aspx" />
+    <Content Include="assets\img\Adsız tasarım.png" />
+    <Content Include="assets\js\footer.js" />
     <Content Include="Confirm.aspx" />
     <Content Include="Confirmonay.aspx" />
     <Content Include="css\addBlogCss.css" />
+    <Content Include="css\comments.css" />
     <Content Include="css\ErrorStyle.css" />
+    <Content Include="css\footerstyle.css" />
     <Content Include="css\Homestyle.css" />
     <Content Include="css\profilStyle.css" />
     <Content Include="assets\css\bootstrap.min.css" />
@@ -110,6 +114,7 @@
     <Content Include="medpost.aspx" />
     <Content Include="profil.aspx" />
     <Content Include="Mesagges.aspx" />
+    <Content Include="search.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +233,13 @@
       <DependentUpon>Mesagges.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLayout.Master" />
@@ -240,9 +252,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="mediumish-html\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,7 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediumish-html/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="medpost.aspx.cs" Inherits="BlogWeb.mediumish_html.medpost" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="medpost.aspx.cs" Inherits="BlogWeb.mediumish_html.medpost" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/comments.css" rel="stylesheet" />
+</asp:Content>
+
+
+
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <asp:ListView ID="ListView2" runat="server">
+
+
         <ItemTemplate>
             <div class="container">
                 <div class="row">
@@ -78,22 +90,22 @@
                             <blockquote>
                                 <%# Eval("bflag") %>
                             </blockquote>
-                            <p>
-                                Freemium non-disclosure agreement lean startup bootstrapping holy grail ramen MVP iteration accelerator
-                                . Strategy market ramen leverage paradigm shift seed round entrepreneur crowdfunding social proof angel in
-                                vestor partner network virality.
-                            </p>
+
                         </div>
                         <!-- End Post Content -->
                         <!-- Begin Tags -->
-                        <div class="after-post-tags">
+
+
+                        <%--<div class="after-post-tags">
                             <ul class="tags">
                                 <li><a href="#">Design</a></li>
                                 <li><a href="#">Growth Mindset</a></li>
                                 <li><a href="#">Productivity</a></li>
                                 <li><a href="#">Personal Growth</a></li>
                             </ul>
-                        </div>
+                        </div>--%>
+
+
                         <!-- End Tags -->
 
                     </div>
@@ -106,11 +118,98 @@
     <!-- End Article
  ================================================== -->
 
+    <!--begin commends
+================================================== -->
+
+    <%--    <section class="content-item article-post" id="comments">
+        <div class="concatt">
+            <div class="row">
+                <div class="col-sm-8">
+
+                    <h3 class="pull-left">New Comment</h3>
+                    <button type="submit" class="btn btn-normal pull-right">Submit</button>
+                    <fieldset>
+                        <div class="">
+                            <div class="col-sm-3 col-lg-2 hidden-xs">
+                                <img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
+                                <textarea class="form-control" id="message" placeholder="Your message" required=""></textarea>
+                            </div>
+                        </div>
+                    </fieldset>--%>
+
+    <!-- End commends
+================================================== -->
+
     <div class="hideshare"></div>
     <!-- Begin Related
 ================================================== -->
     <div class="graybg">
+
+
+
         <div class="container">
+
+            <section class="content-item " id="comments">
+
+                <div style="padding: 20px">
+
+                    <h4 class="pull-left">Yorumlar</h4>
+                    <br />
+
+                    <div class="form-group col-xs-12 col-sm-9 col-lg-10">
+
+                        <textarea class="form-control" runat="server" id="message" placeholder="Your message" required=""></textarea>
+                    </div>
+
+                    <asp:Button ID="btnComment" runat="server" OnClick="btnComment_Click" Text="Gönder" />
+
+                    <asp:ListView ID="ListView4" runat="server">
+                        <ItemTemplate>
+                            <h3><%#Eval("sayi") %></h3>
+
+                        </ItemTemplate>
+                    </asp:ListView>
+                    <!-- COMMENT 1 - START -->
+                    
+
+                    <asp:ListView ID="ListView3" runat="server">
+                        <ItemTemplate>
+
+
+
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src='<%#Eval("writerImg") %>' alt=""></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><%#Eval("writerName") %></h4>
+                                    <p><%#Eval("cmYorum") %></p>
+                                    <ul class="list-unstyled list-inline media-detail pull-left" style="display: flex">
+                                        <li><i class="fa fa-calendar"></i><%#Eval("cmTime") %></li>
+                                        <li><i class="fa fa-thumbs-up"></i><%#Eval("cmlike") %></li>
+                                    </ul>
+                                    <ul class="list-unstyled list-inline media-detail pull-right" style="display: flex">
+                                        <li class=""><a href="#">Like</a></li>
+                                        <li class=""><a href="#">Reply</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+                        </ItemTemplate>
+
+                    </asp:ListView>
+                    <!-- COMMENT 1 - END -->
+
+                </div>
+            </section>
+
+
+
+
             <div class="row listrecent listrelated">
                 <asp:ListView ID="ListView1" runat="server">
                     <ItemTemplate>

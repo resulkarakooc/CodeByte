@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediumish-html/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="Error404.aspx.cs" Inherits="BlogWeb.mediumish_html.Error404" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="DefaultLayout.Master" AutoEventWireup="true" CodeBehind="Error404.aspx.cs" Inherits="BlogWeb.mediumish_html.Error404" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 

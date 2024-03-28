@@ -2,22 +2,21 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="tr">
 <head runat="server">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="assets/img/favicon.ico">
-    <title>Mediumish - A Medium style template by WowThemes.net</title>
+    <link rel="icon" href="assets/img/Adsız tasarım.png">
+    <title>CodeByte-</title>
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="/assets/css/mediumish.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/footerstyle.css" />
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder>
@@ -35,7 +34,7 @@
             <div class="container">
                 <!-- Begin Logo -->
                 <a class="navbar-brand" href="Default.aspx">
-                    <img src="assets/img/logo.png" alt="logo">
+                    <img src="assets/img/Adsız tasarım.png" alt="logo">
                 </a>
                 <!-- End Logo -->
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -65,18 +64,17 @@
                     <!-- End Menu -->
                     <!-- Begin Search -->
                     <div class="form-inline my-2 my-lg-0">
-                        <asp:TextBox ID="search" CssClass="form-control mr-sm-2" TextMode="Search" placeholder="search" runat="server"></asp:TextBox>
-
-
-                        <%--<input class="form-control mr-sm-2" type="text" placeholder="Search">--%>
+                        <asp:TextBox ID="search" CssClass="form-control mr-sm-2" TextMode="Search" placeholder="search" runat="server" onkeypress="return handleEnter(event)"></asp:TextBox>
                         <span class="search-icon">
-                            <svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25">
+                            <asp:LinkButton CssClass="svgIcon-use" ID="btnsearch" OnClick="btnsearch_Click" runat="server"><svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25">
                                 <path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
                                 </path>
-                            </svg>
+                            </svg></asp:LinkButton>
                         </span>
+
+                        <!--end Search -->
                     </div>
-                    <asp:HyperLink ID="prolink1" NavigateUrl="~/mediumish-html/profil.aspx" CssClass="nav-link" runat="server"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <asp:HyperLink ID="prolink1" NavigateUrl="/profil.aspx" CssClass="nav-link" runat="server"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                     <path  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
                      </svg></asp:HyperLink>
 
@@ -86,17 +84,115 @@
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-
-        <!-- Bootstrap core JavaScript
- ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-            crossorigin="anonymous"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-
     </form>
+    <!--footer-->
+
+
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="containerr">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18 foot">Get in Touch</h3>
+                            <p>Yazılım söylediğinizi yapar istediğinizi <br /> değil!</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="novalidate" _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18 foot">Download</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Android App</a></li>
+                                <li><a href="#">ios App</a></li>
+                                <li><a href="#">Desktop</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">My tasks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18 foot">Help</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Term &amp; conditions</a></li>
+                                <li><a href="#">Reporting</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Support Policy</a></li>
+                                <li><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18 foot">Team Solutions</h3>
+                            <div class="f_social_icon">
+                                <a href="#" class="fab fa-facebook"></a>
+                                <a href="#" class="fab fa-twitter"></a>
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-pinterest"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-7">
+                        <p class="mb-0 f_400">© cakecounter Inc.. 2019 All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 col-sm-5 text-right">
+                        <p>Made with <i class="icon_heart"></i>in <a href="http://cakecounter.com" target="_blank">CakeCounter</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+ ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+    <script>
+        function handleEnter(e) {
+            if (e.keyCode == 13) { // Enter tuşu
+                e.preventDefault();
+                document.getElementById('<%= btnsearch.ClientID %>').click(); // LinkButton'a tıkla
+            }
+        }
+    </script>
+
+
+
 </body>
 </html>

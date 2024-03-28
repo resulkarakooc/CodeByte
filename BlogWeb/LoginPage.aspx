@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediumish-html/DefaultLayout.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="BlogWeb.mediumish_html.LoginPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="DefaultLayout.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="BlogWeb.mediumish_html.LoginPage" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <link rel="stylesheet" href="assets/css/LoginCss.css" />
