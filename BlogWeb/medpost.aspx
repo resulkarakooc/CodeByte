@@ -66,10 +66,10 @@
                                 </div>
                                 <div class="col-md-10">
                                     <a class="link-dark" href="Author.aspx?id=<%#Eval("writerID") %>">
-                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("writerName") %>'></asp:Label></a><a href="#" class="btn follow">Follow</a>
+                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("writerName") %>'></asp:Label></a> <br /> <a href="#" class="btn follow">Follow</a>
                                     <span class="author-description">
                                         <asp:Label ID="Label4" runat="server" Text='<%# Eval("writerAbout") %>'></asp:Label></span>
-                                    <span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+                                    <span class="post-date"><%#Eval("bdate") %></span><span class="dot"></span><span class="post-read"></span>
                                 </div>
                             </div>
                             <!-- End Top Menta -->
@@ -93,21 +93,32 @@
 
                         </div>
                         <!-- End Post Content -->
-                        <!-- Begin Tags -->
+                     <%--   <div class="heart-container">
+                            <asp:CheckBox OnCheckedChanged="CheckButton_Click" ID="check" CssClass="checkbox" runat="server" />
+                            
+                            <div class="svg-container" style="display:flex; justify-content:space-around;">
+                                <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                                    </path>
+                                </svg>
+                                <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="10,10 20,20"></polygon>
+                                    <polygon points="10,50 20,50"></polygon>
+                                    <polygon points="20,80 30,70"></polygon>
+                                    <polygon points="90,10 80,20"></polygon>
+                                    <polygon points="90,50 80,50"></polygon>
+                                    <polygon points="80,80 70,70"></polygon>
+                                </svg>
+                                &emsp;&emsp;<span style="color:red"><%#Eval("blike") %></span>
+                            </div>
 
-
-                        <%--<div class="after-post-tags">
-                            <ul class="tags">
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Growth Mindset</a></li>
-                                <li><a href="#">Productivity</a></li>
-                                <li><a href="#">Personal Growth</a></li>
-                            </ul>
                         </div>--%>
-
-
-                        <!-- End Tags -->
-
                     </div>
                     <!-- End Post -->
 
@@ -121,23 +132,6 @@
     <!--begin commends
 ================================================== -->
 
-    <%--    <section class="content-item article-post" id="comments">
-        <div class="concatt">
-            <div class="row">
-                <div class="col-sm-8">
-
-                    <h3 class="pull-left">New Comment</h3>
-                    <button type="submit" class="btn btn-normal pull-right">Submit</button>
-                    <fieldset>
-                        <div class="">
-                            <div class="col-sm-3 col-lg-2 hidden-xs">
-                                <img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                            </div>
-                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
-                                <textarea class="form-control" id="message" placeholder="Your message" required=""></textarea>
-                            </div>
-                        </div>
-                    </fieldset>--%>
 
     <!-- End commends
 ================================================== -->
@@ -172,7 +166,7 @@
                         </ItemTemplate>
                     </asp:ListView>
                     <!-- COMMENT 1 - START -->
-                    
+
 
                     <asp:ListView ID="ListView3" runat="server">
                         <ItemTemplate>
@@ -190,7 +184,7 @@
                                         <li><i class="fa fa-thumbs-up"></i><%#Eval("cmlike") %></li>
                                     </ul>
                                     <ul class="list-unstyled list-inline media-detail pull-right" style="display: flex">
-                                        <li class=""><a href="#">Like</a></li>
+                                        <li class="heart-container" title="Like"></li>
                                         <li class=""><a href="#">Reply</a></li>
                                     </ul>
                                 </div>
@@ -222,8 +216,7 @@
                                         <a href="medpost.aspx?id=<%#Eval("blogID") %>">
                                             <asp:Label ID="Label2" CssClass="card-text" runat="server" Text='<%# Eval("blogTitle") %>'></asp:Label></a>
                                     </h2>
-                                    <h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to
-additional content. This content is a little bit longer.
+                                    <h4 class="card-text"><%#Eval("aciklama") %>
                                     </h4>
                                     <div class="metafooter">
                                         <div class="wrapfooter">
@@ -233,8 +226,8 @@ additional content. This content is a little bit longer.
                                                         src='<%#Eval("writerImg") %>'
                                                         alt="Sal">
                                                 </a>
-                                                &nbsp;</span><span class="author-meta"><span class="post-name"><a href="author.html">Sal</a></span><br />
-                                                    <span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+                                                &nbsp;</span><span class="author-meta"><span class="post-name"><a href="author.html"><%#Eval("writerName") %></a></span><br />
+                                                    <span class="post-date"><%#Eval("bdate") %></span><span class="dot"></span><span class="post-read">6 min read</span>
                                                 </span>
                                             <span class="post-read-more">
                                                 <a href="medpost.aspx?id=<%#Eval("blogID") %>" title="Read Story">

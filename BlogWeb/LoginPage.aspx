@@ -42,7 +42,7 @@
                         <div class="input-block">
 
                             <asp:Label AssociatedControlID="tbmaill" ID="Label3" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="E-mail:"></asp:Label>
-                            <asp:TextBox ID="tbmaill" AutoCompleteType="Email" TextMode="Email" placeholder="name@example.com" CssClass="form-group form-control login-email" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="tbmaill" AutoCompleteType="Email" TextMode="Email" placeholder="name@example.com" CssClass="form-group form-control login-email" runat="server" ></asp:TextBox>
 
 
                         </div>
@@ -54,7 +54,7 @@
 
                         </div>
                     </fieldset>
-                    <asp:Button ID="Button1" CssClass="btn btn-primary form-control" runat="server" OnClick="ButtonLogin_Click" OnClientClick="showAlertDialog();" Text="Giris" />
+                    <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" OnClick="ButtonLogin_Click" OnClientClick="showAlertDialog();" Text="Giris" />
                 </div>
             </div>
             <div class="form-wrapper">
@@ -70,27 +70,27 @@
                     <fieldset>
                         <legend>Please, enter your email, password and password confirmation for sign up.</legend>
 
-                        <div class="input-block">
+                        <div class="input-block form-group">
                             <asp:Label AssociatedControlID="tbname" ID="Label1" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Kullanıcı Adı:"></asp:Label>
-                            <asp:TextBox ID="tbname" AutoCompleteType="FirstName" TextMode="SingleLine" placeholder="name" CssClass="form-group form-control sign-email" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="tbname" AutoCompleteType="FirstName" TextMode="SingleLine" placeholder="name" CssClass="form-control sign-email" runat="server" ></asp:TextBox>
                            
                         </div>
 
-                        <div class="input-block">
+                        <div class="input-block form-group">
                             <asp:Label AssociatedControlID="tbmail" ID="Label4" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="E-mail:"></asp:Label>
-                            <asp:TextBox ID="tbmail" AutoCompleteType="Email" TextMode="Email" placeholder="name@example.com" CssClass="form-group form-control signup-email" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="tbmail" AutoCompleteType="Email"  TextMode="Email" placeholder="name@example.com" CssClass=" form-control signup-email" runat="server"></asp:TextBox>
 
                         </div>
 
-                        <div class="input-block">
-                            <asp:Label AssociatedControlID="tbbpass" ID="Label5" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Password"></asp:Label>
-                            <asp:TextBox ID="tbbpass"  TextMode="Password"  CssClass="form-group form-control signup-password" runat="server"></asp:TextBox>
+                        <div class="input-block form-group">
+                            <asp:Label AssociatedControlID="tbbpass" ID="Label5" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Password" ></asp:Label>
+                            <asp:TextBox ID="tbbpass"  TextMode="Password"  CssClass=" form-control signup-password" runat="server" ></asp:TextBox>
 
                         </div>
 
-                        <div class="input-block">
+                        <div class="input-block form-group">
                             <asp:Label AssociatedControlID="tbbpassconfirm" ID="Label6" Style="margin-bottom: 0px;" runat="server" CssClass="" Text="Password Confirm"></asp:Label>
-                            <asp:TextBox ID="tbbpassconfirm" AutoCompleteType="Email" TextMode="Password"  CssClass="form-group form-control login-email" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="tbbpassconfirm" AutoCompleteType="Email" TextMode="Password"  CssClass="form-control login-email" runat="server" ></asp:TextBox>
 
                         </div>
 

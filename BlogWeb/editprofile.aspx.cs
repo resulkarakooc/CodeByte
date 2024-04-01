@@ -27,29 +27,41 @@ namespace BlogWeb.mediumish_html
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
 
+
+
+            int writerID = Convert.ToInt32(Session["WriterID"]);
+
+            SqlCommand editp = new SqlCommand("update Table_writer set writerName=@name, writerUnvan=@unvan, writerSkill=@skill, writerImg=@photo, writerMail=@mail, writerAbout=@pabout  where writerID=@pid", SqlConnectClass.connection);
+            SqlCommand link = new SqlCommand(@"UPDATE Table_link SET writerID = CASE WHEN writerID IS NULL THEN @pidd ELSE writerID END, github = COALESCE(@pgit, github), linkedln = COALESCE(@plink, linkedln), website = COALESCE(@pweb, website), facebook = COALESCE(@pfab, facebook), instagram = COALESCE(@pinsta, instagram), twitter = COALESCE(@px, twitter) WHERE writerID = @pid; IF @@ROWCOUNT = 0 BEGIN INSERT INTO Table_link (writerID, github, linkedln, website, facebook, instagram, twitter) VALUES (@pidd, @pgit, @plink, @pweb, @pfab, @pinsta, @px); END");
+
+
+            SqlConnectClass.checkconnection();
+
+            link.Parameters.AddWithValue("@pweb", website.Text);
+            link.Parameters.AddWithValue("@pid", writerID);
+            link.Parameters.AddWithValue("@pgit", github.Text);
+            link.Parameters.AddWithValue("@pfab", facebook.Text);
+            link.Parameters.AddWithValue("@pinsta", instagram.Text);
             
+            link.Parameters.AddWithValue("@px", twitter.Text);
 
-                int writerID = Convert.ToInt32(Session["WriterID"]);
 
-                SqlCommand editp = new SqlCommand("update Table_writer set writerName=@name, writerUnvan=@unvan, writerSkill=@skill, writerImg=@photo, writerMail=@mail, writerAbout=@pabout  where writerID=@pid", SqlConnectClass.connection);
+            editp.Parameters.AddWithValue("@pid", writerID);
+            editp.Parameters.AddWithValue("@name", TextBox1.Text);
+            editp.Parameters.AddWithValue("@unvan", TextBox3.Text);
+            editp.Parameters.AddWithValue("@skill", TextBox5.Text);
+            editp.Parameters.AddWithValue("@photo", TextBox11.Text);
+            editp.Parameters.AddWithValue("@mail", TextBox2.Text);
+            editp.Parameters.AddWithValue("@pabout", TextBox4.Text);
 
-                SqlConnectClass.checkconnection();
 
-                editp.Parameters.AddWithValue("@pid", writerID);
-                editp.Parameters.AddWithValue("@name", TextBox1.Text);
-                editp.Parameters.AddWithValue("@unvan", TextBox3.Text);
-                editp.Parameters.AddWithValue("@skill", TextBox5.Text);
-                editp.Parameters.AddWithValue("@photo", TextBox11.Text);
-                editp.Parameters.AddWithValue("@mail", TextBox2.Text);
-                editp.Parameters.AddWithValue("@pabout", TextBox4.Text);
+            editp.ExecuteNonQuery();
 
-                editp.ExecuteNonQuery();
-
-                Response.Redirect("profil.aspx");
+            Response.Redirect("profil.aspx");
 
 
 
-            
+
 
 
         }

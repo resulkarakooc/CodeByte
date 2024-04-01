@@ -115,6 +115,7 @@
     <Content Include="profil.aspx" />
     <Content Include="Mesagges.aspx" />
     <Content Include="search.aspx" />
+    <Content Include="UsersList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +240,13 @@
     </Compile>
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersList.aspx.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersList.aspx.designer.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

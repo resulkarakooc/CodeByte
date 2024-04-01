@@ -29,7 +29,7 @@ namespace BlogWeb.mediumish_html
             ikra.Close();
 
             SqlCommand cmdlist = new SqlCommand("Select blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
-                " bdescription,   bConfirmation ,w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+                " bdescription, b.bdate,   bConfirmation ,w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
                 " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirm and w.writerID=@ppid", SqlConnectClass.connection);
 
             SqlConnectClass.checkconnection();

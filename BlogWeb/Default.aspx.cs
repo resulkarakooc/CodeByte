@@ -14,7 +14,7 @@ namespace BlogWeb.mediumish_html
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if( Request.QueryString["dp"] == null)
+            if (Request.QueryString["dp"] == null)
             {
 
                 SqlCommand cmdlist = new SqlCommand("Select TOP 6 blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
@@ -34,20 +34,7 @@ namespace BlogWeb.mediumish_html
 
                 oku.Close();
 
-                SqlCommand cmd2list = new SqlCommand("Select Top 10 blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
-                    " bdescription , bConfirmation, b.bdate ,w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
-                    " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirmm ORDER BY NEWID(); ", SqlConnectClass.connection);
 
-                SqlConnectClass.checkconnection();
-
-                cmd2list.Parameters.AddWithValue("@confirmm", true);
-
-                SqlDataReader ikra = cmd2list.ExecuteReader();
-
-                DataList2.DataSource = ikra;
-                DataList2.DataBind();
-
-                ikra.Close();
 
             }
             else
@@ -62,7 +49,7 @@ namespace BlogWeb.mediumish_html
                 SqlConnectClass.checkconnection();
 
                 cmdlist.Parameters.AddWithValue("@confirm", true);
-                cmdlist.Parameters.AddWithValue("@dip",selectedid );
+                cmdlist.Parameters.AddWithValue("@dip", selectedid);
 
                 SqlDataReader oku = cmdlist.ExecuteReader();
 
@@ -73,26 +60,26 @@ namespace BlogWeb.mediumish_html
 
                 oku.Close();
 
-                SqlCommand cmd2list = new SqlCommand("Select Top 10 blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
-                    " bdescription , bConfirmation, b.bdate ,w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
-                    " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirmm ORDER BY NEWID(); ", SqlConnectClass.connection);
 
-                SqlConnectClass.checkconnection();
-
-                cmd2list.Parameters.AddWithValue("@confirmm", true);
-
-                SqlDataReader ikra = cmd2list.ExecuteReader();
-
-                DataList2.DataSource = ikra;
-                DataList2.DataBind();
-
-                ikra.Close();
 
 
 
             }
 
+            SqlCommand cmd2list = new SqlCommand("Select Top 10 blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
+                               "CONCAT(SUBSTRING(bdescription, 1, 70), '...') AS aciklama, bConfirmation, b.bdate ,w.writerID ,writerName, w.writerImg, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+                               " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirmm ORDER BY NEWID(); ", SqlConnectClass.connection);
 
+            SqlConnectClass.checkconnection();
+
+            cmd2list.Parameters.AddWithValue("@confirmm", true);
+
+            SqlDataReader ikra = cmd2list.ExecuteReader();
+
+            DataList2.DataSource = ikra;
+            DataList2.DataBind();
+
+            ikra.Close();
 
 
 

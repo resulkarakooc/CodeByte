@@ -84,59 +84,66 @@ namespace BlogWeb.mediumish_html
 
         protected void registerbtn_click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Insert into Table_writer (writername, writerMail, writerPass) values (@pname, @pmail, @ppass)", SqlConnectClass.connection);
-            SqlCommand control = new SqlCommand("select * from Table_writer", SqlConnectClass.connection);
-
-
-
-
-            SqlConnectClass.checkconnection();
-
-            if (!IsUsernameUnique(tbname.Text))
+            if (tbname.Text!="" && tbmail.Text!="" && tbbpassconfirm.Text!="")
             {
-                //HATA
-               
-                titlee.InnerText = "Kullanıcı adı kullanılıyor";
-                tbname.Text = "";
-                tbmail.Text = "";
-
-                tbpass.Text = "";
+                SqlCommand cmd = new SqlCommand("Insert into Table_writer (writername, writerMail, writerPass) values (@pname, @pmail, @ppass)", SqlConnectClass.connection);
+                SqlCommand control = new SqlCommand("select * from Table_writer", SqlConnectClass.connection);
 
 
-            }
-            else if (!IsEmailUnique(tbmail.Text))
-            {
-              
-                titlee.InnerText = "email kullanılıyor";
-                tbname.Text = "";
-                tbmail.Text = "";
 
-                tbpass.Text = "";
+
+                SqlConnectClass.checkconnection();
+
+                if (!IsUsernameUnique(tbname.Text))
+                {
+                    //HATA
+
+                    titlee.InnerText = "Kullanıcı adı kullanılıyor";
+                    tbname.Text = "";
+                    tbmail.Text = "";
+
+                    tbpass.Text = "";
+
+
+                }
+                else if (!IsEmailUnique(tbmail.Text))
+                {
+
+                    titlee.InnerText = "email kullanılıyor";
+                    tbname.Text = "";
+                    tbmail.Text = "";
+
+                    tbpass.Text = "";
+                }
+                else
+                {
+                    string newpass = Sha256converter.ComputeSha256Hash(tbbpass.Text);
+
+
+
+                    cmd.Parameters.AddWithValue("@pname", tbname.Text);
+                    cmd.Parameters.AddWithValue("@pmail", tbmail.Text);
+
+                    cmd.Parameters.AddWithValue("@ppass", newpass);
+
+                    tbname.Text = "";
+                    tbmail.Text = "";
+
+                    tbpass.Text = "";
+
+
+                    cmd.ExecuteNonQuery();
+
+
+                    titlee.InnerText = "Kayıt basarılı";
+
+                }
+
             }
             else
             {
-                string newpass = Sha256converter.ComputeSha256Hash(tbbpass.Text);
-
-
-
-                cmd.Parameters.AddWithValue("@pname", tbname.Text);
-                cmd.Parameters.AddWithValue("@pmail", tbmail.Text);
-                
-                cmd.Parameters.AddWithValue("@ppass", newpass);
-
-                tbname.Text = "";
-                tbmail.Text = "";
-                
-                tbpass.Text = "";
-                
-
-                cmd.ExecuteNonQuery();
-
-               
-                titlee.InnerText = "Kayıt basarılı";
-
+                titlee.InnerText = "Tüm alanları doldurunuz";
             }
-
 
 
 

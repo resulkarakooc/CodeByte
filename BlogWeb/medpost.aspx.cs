@@ -15,8 +15,8 @@ namespace BlogWeb.mediumish_html
         {
             int selectedid = Convert.ToInt32(Request.QueryString["id"]);
 
-            SqlCommand postcmd = new SqlCommand("Select blogID , b.writerID , b.deparID, b.bflag ,blogTitle , blogImg ," +
-                " bdescription , bConfirmation ,w.writerID, w.writerImg ,writerName,w.writerAbout, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+            SqlCommand postcmd = new SqlCommand("Select blogID , b.writerID , b.blike, b.deparID, b.bflag ,blogTitle , blogImg ," +
+                " bdescription ,b.bdate, bConfirmation ,w.writerID, w.writerImg ,writerName,w.writerAbout, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
                 " w.writerID inner join Table_depart d on b.deparID= d.deparID where blogID=@pid  ", SqlConnectClass.connection);
 
             SqlConnectClass.checkconnection();
@@ -32,7 +32,7 @@ namespace BlogWeb.mediumish_html
 
 
             SqlCommand cmd2list = new SqlCommand("Select TOP 6 blogID , b.writerID , b.deparID ,blogTitle , blogImg ," +
-                " bdescription , bConfirmation ,w.writerID, w.writerImg ,writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
+                " CONCAT(SUBSTRING(bdescription, 1, 70), '...') AS aciklama,b.bdate, bConfirmation ,w.writerID, w.writerImg ,writerName, d.deparID, deparName  from Table_blog b inner join Table_writer w on  b.writerID =" +
                 " w.writerID inner join Table_depart d on b.deparID= d.deparID where bConfirmation= @confirm ORDER BY NEWID();", SqlConnectClass.connection);
 
             SqlConnectClass.checkconnection();
@@ -77,6 +77,7 @@ namespace BlogWeb.mediumish_html
             reader.Close();
 
         }
+        
 
 
 
@@ -111,6 +112,15 @@ namespace BlogWeb.mediumish_html
                 Response.Redirect("Loginpage.aspx");
             }
 
+        }
+
+        protected void CheckButton_Click(object sender, EventArgs e)
+        {
+            int selectedid = Convert.ToInt32(Request.QueryString["id"]);
+            SqlCommand like = new SqlCommand("update Table_blog set blike=blike+1 where blogID=@pidd", SqlConnectClass.connection);
+            SqlConnectClass.checkconnection();
+            like.Parameters.AddWithValue("@pidd", selectedid);
+            like.ExecuteNonQuery();
         }
     }
 }

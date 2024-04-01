@@ -20,7 +20,7 @@ namespace BlogWeb.mediumish_html
             if (Convert.ToBoolean(Session["IsUserOnline"]) == true)
             {
                 //no  problem
-                SqlCommand profil = new SqlCommand("select * from Table_writer where writerID=@pid", SqlConnectClass.connection);
+                SqlCommand profil = new SqlCommand("select w.writerID, w.writerName, w.writerAbout, w.writerSkill ,w.writerAbout ,w.writerMail, w.writerImg, w.writerUnvan, CONCAT(SUBSTRING(l.github, 1, 20), '...') AS github, CONCAT(SUBSTRING(l.website, 1, 20), '...') AS website, CONCAT(SUBSTRING(l.linkedln, 1, 20), '...') AS linkedln, l.instagram, l.twitter, l.facebook    from Table_writer w inner join Table_link l on w.writerID=l.writerID  where w.writerID=@pid", SqlConnectClass.connection);
 
                 SqlConnectClass.checkconnection();
 

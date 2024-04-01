@@ -11,7 +11,7 @@
         <div class="mainheading">
             <h1 class="sitetitle">CodeByte</h1>
             <p class="lead">
-                Bootstrap theme, medium style, simply perfect for bloggers
+                CodeByte theme, developer style, simply perfect for bloggers...
             </p>
         </div>
         <section class="featured-posts">

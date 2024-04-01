@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminLayout.Master" AutoEventWireup="true" CodeBehind="AdminPanel.aspx.cs" Inherits="BlogWeb.AdminPanel" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="AdminLayout.Master" AutoEventWireup="true" CodeBehind="AdminPanel.aspx.cs" Inherits="BlogWeb.AdminPanel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <h1>Gelen Mesajlar</h1>

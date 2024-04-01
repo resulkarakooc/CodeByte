@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BlogWeb.Classes;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -60,6 +62,29 @@ namespace BlogWeb.mediumish_html
             {
                 search.Attributes["placeholder"] = "Buraya yaz :)";
             }
+
+        }
+
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+           
+            SqlCommand contact = new SqlCommand("insert into Table_contact (Username, Email, Messages) values (@name, @mail, @pmesag)", SqlConnectClass.connection);
+
+            SqlConnectClass.checkconnection();
+
+            contact.Parameters.AddWithValue("@name", contact1.Text);
+            contact.Parameters.AddWithValue("@mail", contact0.Text);
+            contact.Parameters.AddWithValue("@pmesag", contact2.Text);
+
+            contact.ExecuteNonQuery();
+
+            contact0.Text = "";
+            contact1.Text = "";
+            contact2.Text = "";
+
+
+
 
         }
     }
