@@ -1,6 +1,6 @@
 # [CodeByte](https://www.codebyte.com.tr)
 
-##Kullanılan Teknolojiler <br />
+## Kullanılan Teknolojiler <br />
 
 > ASP.NET FrameWork <br />
 > C# Programming Language <br />
