@@ -21,7 +21,7 @@ Merhaba ben Resul :) Medium benzeri sitemi sizlerle paylaşmak istiyorum. <br />
 > Visual Studio IDE <br />
 
 <br />
-<br />
+
 
 ### Özellikler <br />
 > Kayıt olma ve profil kişiselleştirme <br />
